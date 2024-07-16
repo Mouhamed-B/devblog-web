@@ -6,17 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "openapi:gen": "openapi -i https://devblog-api.vercel.app/api/schema/ -o src/lib/api",
     "lint": "next lint"
   },
   "dependencies": {
+    "jwt-decode": "^4.0.0",
+    "next": "14.2.5",
+    "next-auth": "^4.24.7",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.5"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "openapi-typescript": "^7.0.2",
+    "openapi-typescript-codegen": "^0.29.0",
+    "typescript": "^5"
   }
 }
