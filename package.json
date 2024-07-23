@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "openapi:gen": "openapi -i https://devblog-api.vercel.app/api/schema/ -o src/lib/api",
+    "openapi:gen-services": "openapi -i https://devblog-api.vercel.app/api/schema/ -o src/lib/api",
     "lint": "next lint"
   },
   "dependencies": {
