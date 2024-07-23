@@ -3,13 +3,13 @@
 /* tslint:disable */
 /* eslint-disable */
 export type Post = {
-    readonly id: number;
-    readonly author: string;
+    readonly id?: number;
+    readonly author?: string;
     title: string;
-    readonly slug: string;
+    readonly slug?: string;
     image: string;
     description: string;
     content: string;
-    readonly date_posted: string;
+    readonly date_posted?: string;
 };
 
