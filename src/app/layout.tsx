@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "@/components/nav/navbar";
 import Footer from "@/components/footer";
 
@@ -20,7 +20,6 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-100">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
       <body className={inter.className+" d-flex flex-column h-100 pb-0"}>
         <Navbar/>  
         {children}
