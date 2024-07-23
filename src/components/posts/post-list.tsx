@@ -10,10 +10,10 @@ const PostList = ({ posts }:{ posts:Post[] }) => {
             posts.map(post => (
               <div className="col" key={post.id}>
                 <Link href={`/posts/${post.id}`}>
-                    <div className="card shadow-sm p-3">
-                      <img src={post.image} alt={`${post.title} image`} width="100%" />
-                      <div className="card-body">
-                        <p className="card-text">
+                    <div className="card shadow-sm pt-3" style={{height:'17rem'}}>
+                      <img src={post.image} alt={`${post.title} image`} width="100%" className='my-auto' style={{flex:'1 1 auto'}} />
+                      <div className="card-body d-flex">
+                        <p className="card-text mt-auto">
                           {post.title}
                         </p>
                       </div>
