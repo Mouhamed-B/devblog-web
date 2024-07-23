@@ -4,7 +4,7 @@ import { getCookie } from '@/lib/utils';
 import { useSearchParams } from 'next/navigation';
 import React, { useRef, useState } from 'react'
 
-async function create(post:Post,formData: FormData) {
+async function create(formData: FormData) {
     const token = getCookie('auth-token')
     OpenAPI.TOKEN = token
     try {
@@ -25,7 +25,6 @@ const page = () => {
     const formRef = useRef<HTMLFormElement>(null)
     const [success, setSuccess] = useState(false)
     const [error, setError] = useState(false)
-    const id = sea
     return (
         <main className="col-8 col-md-6 col-lg-4 m-auto">
             <form method="post" ref={formRef} onSubmit={async (e) => {
