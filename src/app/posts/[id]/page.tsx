@@ -18,7 +18,7 @@ const PostDetail = async ({ params } : { params : { id : string } }) => {
     <main className="container mb-5">
       <div className="row row-cols-1 mt-5">
         <div className="col">
-          <img src={post.image} className="w-100" alt={post.title} />
+          <img src={post.image} className="mb-5" alt={post.title} />
         </div>
         <div className="col">
           <h1>{post.title}</h1>
