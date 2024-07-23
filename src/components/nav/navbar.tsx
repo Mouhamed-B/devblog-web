@@ -19,8 +19,8 @@ const navbar = async () => {
                     <li><Link href="/" className="nav-link px-2">All Posts</Link></li>
                     {session?.user &&
                         <>
-                        <li><Link href="posts/create" className="nav-link px-2">Create Post</Link></li>    
-                        <li><Link href="posts/my-posts" className="nav-link px-2">My Posts</Link></li>
+                        <li><Link href="/posts/create" className="nav-link px-2">Create Post</Link></li>    
+                        <li><Link href="/posts/my-posts" className="nav-link px-2">My Posts</Link></li>
                         </>
                     }
                 </ul>
