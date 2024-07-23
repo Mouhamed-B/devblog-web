@@ -31,7 +31,7 @@ export const authOptions:NextAuthOptions = {
                 const cookieStore = cookies()
 
                 try {
-                    const res = await AuthService.authLoginCreate(credentials!)
+                    const res = await AuthService.authLoginCreate(credentials!) as any
 
                     const payload = jwtDecode<DecodedJwt>(res.access!)
                     
