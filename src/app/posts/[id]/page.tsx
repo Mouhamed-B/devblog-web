@@ -1,8 +1,8 @@
-import Link from 'next/link';
 import { notFound } from 'next/navigation'
 import { User } from '@/lib/auth/User';
 import { Post, PostsService } from '@/lib/api';
 import { getServerAuthSession } from '@/lib/auth';
+import PostActions from '@/components/posts/post-actions';
 
 const PostDetail = async ({ params } : { params : { id : string } }) => {
   let post:Post
@@ -27,14 +27,7 @@ const PostDetail = async ({ params } : { params : { id : string } }) => {
           <p className="mt-3">{post.content}</p>
           <div className="d-flex gap-4 align-items-center w-100">
             {user && user.username === post.author && (
-              <>
-                <form action="" className="me-3">
-                  <button type="submit" className="btn btn-danger">Delete</button>
-                </form>
-                <Link href={`${post.id}/update`} className="btn btn-primary">
-                  Edit
-                </Link>
-              </>
+              <PostActions postId={post.id!} />
             )}
           </div>
         </div>
