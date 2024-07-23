@@ -2,8 +2,8 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import type { MyTokenObtainPair } from '../models/MyTokenObtainPair';
 import type { TokenBlacklist } from '../models/TokenBlacklist';
-import type { TokenObtainPair } from '../models/TokenObtainPair';
 import type { TokenRefresh } from '../models/TokenRefresh';
 import type { UserCreate } from '../models/UserCreate';
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -14,12 +14,12 @@ export class AuthService {
      * Takes a set of user credentials and returns an access and refresh JSON web
      * token pair to prove the authentication of those credentials.
      * @param requestBody
-     * @returns TokenObtainPair
+     * @returns MyTokenObtainPair
      * @throws ApiError
      */
     public static authLoginCreate(
-        requestBody: TokenObtainPair,
-    ): CancelablePromise<TokenObtainPair> {
+        requestBody: MyTokenObtainPair,
+    ): CancelablePromise<MyTokenObtainPair> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/auth/login',

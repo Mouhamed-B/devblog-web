@@ -156,7 +156,6 @@ export const getHeaders = async (config: OpenAPIConfig, options: ApiRequestOptio
         }), {} as Record<string, string>);
 
     if (isStringWithValue(token)) {
-        debugger
         headers['Authorization'] = `Bearer ${token}`;
     }
 
