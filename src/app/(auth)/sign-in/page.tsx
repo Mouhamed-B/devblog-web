@@ -1,7 +1,7 @@
 "use client";
 import { signIn } from "next-auth/react"
 import { useSearchParams } from "next/navigation";
-import { useRef, useState } from "react"
+import { Suspense, useRef, useState } from "react"
 
 async function authenticate(formData: FormData) {
     try {
@@ -25,9 +25,7 @@ async function authenticate(formData: FormData) {
 
 export default function LoginForm(){
 
-    const searchParams = useSearchParams()
     const formRef = useRef<HTMLFormElement>(null)
-
 
     return (
       <main className="form-signin col-8 col-md-6 col-lg-3 m-auto">
@@ -47,8 +45,15 @@ export default function LoginForm(){
             <label htmlFor="floatingPassword">Password</label>
           </div>
           <button className="btn btn-primary w-100 py-2 mb-3" type="submit">Sign in</button>
-            {searchParams.get('error') ==='CredentialsSignin' && <div className="alert alert-danger">Account not Found</div>}
+          <Suspense>
+            <FormErrors/>
+          </Suspense>
         </form>
       </main>
     )
+}
+
+function FormErrors() {
+    const searchParams = useSearchParams()
+    return searchParams.get('error') ==='CredentialsSignin' ? <div className="alert alert-danger">Account not Found</div> : null
 }
