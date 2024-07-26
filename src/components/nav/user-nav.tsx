@@ -21,8 +21,8 @@ const UserNav = ({session}:{session:any}) => {
         </div>
         :
         <div className="d-flex gap-2">
-          <Link href="sign-in" className="btn btn-primary">Sign in</Link>
-          <Link href="sign-up" className="btn btn-outline-primary">Sign up</Link>
+          <Link href="/sign-in" className="btn btn-primary">Sign in</Link>
+          <Link href="/sign-up" className="btn btn-outline-primary">Sign up</Link>
         </div>
     
   )
