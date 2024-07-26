@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "@/components/nav/navbar";
 import Footer from "@/components/footer";
 
+const dynamic = 'force-dynamic'
 
 const inter = Inter({ subsets: ["latin"] });
 
