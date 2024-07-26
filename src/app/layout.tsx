@@ -6,6 +6,7 @@ import Navbar from "@/components/nav/navbar";
 import Footer from "@/components/footer";
 
 const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store';
 
 const inter = Inter({ subsets: ["latin"] });
 
